@@ -78,7 +78,7 @@ export default {
         thumbnails[i].style['object-fit'] = 'contain';
       }
       this.dropzone.emit("complete", file)
-      if (this.dropzone.options.maxFiles) this.dropzone.options.maxFiles--
+      //if (this.dropzone.options.maxFiles) this.dropzone.options.maxFiles--
       this.dropzone.files.push(file)
       this.$emit('vdropzone-file-added-manually', file)
     },
@@ -230,7 +230,7 @@ export default {
 
     this.dropzone.on('removedfile', function(file) {
       vm.$emit('vdropzone-removed-file', file)
-      if (file.manuallyAdded) vm.dropzone.options.maxFiles++
+      //if (file.manuallyAdded) vm.dropzone.options.maxFiles++
     })
 
     this.dropzone.on('success', function(file, response) {
